@@ -10,18 +10,19 @@ public class RepeatedString {
 
     // Complete the repeatedString function below.
     static long repeatedString(String s, long n) {
-        StringBuilder line = new StringBuilder();
-        while (line.length() < n - s.length()) {
-            line.append(s);
+        long countA = 0;
+        int countAInStr = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'a') {
+                countAInStr++;
+            }
         }
-        line.append(s.substring(0, (int)n-line.length()));
-        int countA=0;
-        for (int i=0;i<line.length();i++){
-            if(line.charAt(i)=='a'){
+        countA = (n / s.length())*countAInStr;
+        for (int i = 0; i < n % s.length(); i++){
+            if(s.charAt(i)=='a'){
                 countA++;
             }
         }
-
         return countA;
 
     }
