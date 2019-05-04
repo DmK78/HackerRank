@@ -10,7 +10,8 @@ public class RepeatedString {
 
     // Complete the repeatedString function below.
     static long repeatedString(String s, long n) {
-        StringBuilder line = new StringBuilder();
+        //StringBuilder line = new StringBuilder();
+        
         while (line.length() < n - s.length()) {
             line.append(s);
         }
