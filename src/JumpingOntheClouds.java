@@ -29,7 +29,10 @@ public class JumpingOntheClouds {
         }
         return countOfJupms;
         /*6
-        0 0 0 1 0 0*/
+        0 0 0 1 0 0
+        abaabaaba
+
+        */
 
     }
 
