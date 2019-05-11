@@ -15,6 +15,7 @@ public class NewYearChaos {
         int mod;
         for (int i=0;i<q.length;i++){
             //System.out.print(Math.abs((q[i]-1)-i)+" ");
+            mod=q[i]-1-i;
             System.out.print((q[i]-1-i)+" ");
             if(Math.abs((q[i]-1)-i)>2 && q[i]>i){
                 chaotic=true;
