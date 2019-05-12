@@ -21,7 +21,7 @@ public class NewYearChaos {
             if (mod > 2 && q[i] > i) {
                 chaotic = true;
                 //break;
-                //
+                ////
             }
 
             if (mod > 0) {
