@@ -10,35 +10,47 @@ public class NewYearChaos {
 
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
-        boolean chaotic=false;
+        boolean chaotic = false;
         int count = 0;
-        int mod;
-        for (int i=0;i<q.length;i++){
-            //System.out.print(Math.abs((q[i]-1)-i)+" ");
-            mod=q[i]-1-i;
-            System.out.print((q[i]-1-i)+" ");
-            if(Math.abs((q[i]-1)-i)>2 && q[i]>i){
-                chaotic=true;
+        int counNew = 0;
+        int mod = 0;
+        for (int i = 0; i < q.length; i++) {
+            //System.out.print((q[i]-1-i)+" ");
+            mod = q[i] - (i + 1);
 
-                break;
+            if (mod > 2 && q[i] > i) {
+                chaotic = true;
+                //break;
             }
+
+            if (mod > 0) {
+                counNew += mod;
+
+            }
+            /*if (mod < -1) {
+                counNew++;
+            }*/
+
+
         }
         if (chaotic) {
             System.out.println("Too chaotic");
         } else {
-            int temp;
-            for (int p = 0; p < q.length; p++) {
-                for (int i = 0; i < q.length - 1; i++) {
-                    if (q[i] > q[i + 1]) {
-                        temp = q[i];
-                        q[i] = q[i + 1];
-                        q[i + 1] = temp;
+            /*int temp;
+            int n=q.length;
+            for (int p = 0; p < n; p++) {
+                for (int i = 1; i < (n); i++) {
+                    if (q[i-1] > q[i]) {
+                        temp = q[i-1];
+                        q[i-1] = q[i];
+                        q[i] = temp;
                         count++;
                         break;
                     }
                 }
-            }
-            System.out.println(count);
+            }*/
+
+            System.out.println(counNew);
         }
     }
 
