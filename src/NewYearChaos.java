@@ -18,7 +18,7 @@ public class NewYearChaos {
             System.out.print((q[i]-1-i)+" ");
             if(Math.abs((q[i]-1)-i)>2 && q[i]>i){
                 chaotic=true;
-
+//
                 break;
             }
         }
